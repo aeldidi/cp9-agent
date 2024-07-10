@@ -28,7 +28,9 @@ async def on_message(message):
                 color=discord.Color.from_rgb(235, 64, 52),
                 title="SUNDANCE MESSAGE DETECTED: BUSTER CALL INITIATED",
             )
-            msg.set_image(url="https://tenor.com/view/buster-call-ohara-gif-27694097")
+            msg.set_image(
+                url="https://media1.tenor.com/m/yhL3VI_N8AoAAAAC/buster-call-ohara.gif"
+            )
             await message.channel.send(embed=msg)
     except Exception as e:
         print(f"exception: {e}")
