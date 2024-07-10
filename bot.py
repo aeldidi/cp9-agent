@@ -11,6 +11,7 @@ class MyClient(discord.Client):
         print(f"Logged on as {self.user}!")
 
     async def on_message(self, message):
+        print(f"{message.author.id}")
         try:
             if message.author.id == 1259617744379183124:
                 await message.delete()
