@@ -25,7 +25,7 @@ async def on_message(message):
         if message.author.id == 1259617744379183124:
             await message.delete()
             msg = discord.Embed(
-                color=(235, 64, 52),
+                color=discord.Color.from_rgb(235, 64, 52),
                 title="SUNDANCE MESSAGE DETECTED: BUSTER CALL INITIATED",
             )
             msg.set_image("https://tenor.com/view/buster-call-ohara-gif-27694097")
