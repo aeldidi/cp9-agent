@@ -1,8 +1,11 @@
 import tomllib
+import sys
 
 import discord
 
-with open("config.toml", "rb") as f:
+args = sys.argv[1:]
+
+with open(args[0], "rb") as f:
     config = tomllib.load(f)
 
 intents = discord.Intents.default()
