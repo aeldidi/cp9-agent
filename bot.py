@@ -18,21 +18,20 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    print(message)
-    # if message.author == client.user:
-    #     return
+    if message.author == client.user:
+        return
 
-    # try:
-    #     if message.author.id == 1259617744379183124:
-    #         await message.delete()
-    #         msg = discord.Embed(
-    #             color=(235, 64, 52),
-    #             title="SUNDANCE MESSAGE DETECTED: BUSTER CALL INITIATED",
-    #         )
-    #         msg.set_image("https://tenor.com/view/buster-call-ohara-gif-27694097")
-    #         await message.channel.send(embed=msg)
-    # except Exception as e:
-    #     print(f"exception: {e}")
+    try:
+        if message.author.id == 1259617744379183124:
+            await message.delete()
+            msg = discord.Embed(
+                color=(235, 64, 52),
+                title="SUNDANCE MESSAGE DETECTED: BUSTER CALL INITIATED",
+            )
+            msg.set_image("https://tenor.com/view/buster-call-ohara-gif-27694097")
+            await message.channel.send(embed=msg)
+    except Exception as e:
+        print(f"exception: {e}")
 
 
 client.run(config["token"])
