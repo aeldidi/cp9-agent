@@ -2,7 +2,7 @@ import tomllib
 
 import discord
 
-with open("config.toml", "r") as f:
+with open("config.toml", "rb") as f:
     config = tomllib.load(f)
 
 
