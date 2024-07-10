@@ -1,8 +1,9 @@
 import tomllib
+import pathlib
 
 import discord
 
-with open("config.toml", "rb") as f:
+with open(pathlib.Path.cwd() / "config.toml", "rb") as f:
     config = tomllib.load(f)
 
 intents = discord.Intents.default()
